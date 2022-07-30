@@ -1,3 +1,6 @@
+#include<bits/stdc++.h>
+using namespace std;
+
 class Solution
 {
 	public:
@@ -22,7 +25,7 @@ class Solution
 	        }
 	        
 	    }
-		vector<string>find_permutation(string S)
+		vector<string> find_permutation(string S)
 		{
 		    // Code here there
 		    sort(S.begin(), S.end());
@@ -37,3 +40,12 @@ class Solution
 		    return ans;
 		}
 };
+
+int main() {
+	Solution s1;
+	vector<string> ans = s1.find_permutation("123456");
+
+	for(auto i: ans) {
+		cout<<i<<endl;
+	}
+}

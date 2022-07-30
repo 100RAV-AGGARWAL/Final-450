@@ -28,4 +28,6 @@ int main() {
     string str1 = "01010011001101";
     cout<<countEqual01(str1);
     return 0;
+
+
 }
