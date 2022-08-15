@@ -22,19 +22,10 @@ class Solution{
         
         while(j<s.size())
         {
-            if(s[j]==s[i])
-            {
-                lpss[j]=i+1;
-                j++;
-                i++;
-            }
+            if(s[j]==s[i]) lpss[j++] = ++i;
             else{
-                if(i != 0){
-                    i=lpss[i-1];
-                }
-                else{
-                    j++;
-                }
+                if(i) i=lpss[i-1];
+                else j++;
             }
         }
         return lpss.back();
