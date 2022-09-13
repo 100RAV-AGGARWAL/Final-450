@@ -1,10 +1,6 @@
 class Solution
 {
     public:
-    bool isLeaf(Node* root) {
-        return (!root->left && !root->right);    
-    }
-    
     bool helper(Node* root, int mn, int mx) {
         if(!root) return true;
         
