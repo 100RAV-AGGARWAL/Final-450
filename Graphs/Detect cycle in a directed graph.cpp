@@ -17,7 +17,7 @@ class Solution {
         return false;
     }
     
-    bool isCyclic(int V, vector<int> adj[]) {
+    bool isCyclicUsingDFS(int V, vector<int> adj[]) {
         // code here
         vector<bool> visited(V, false);
         vector<bool> dfsVis(V, false);
@@ -29,5 +29,52 @@ class Solution {
         }
         
         return false;
+    }
+
+    bool isCyclicUsingKahn(int V, vector<int> adj[])
+    {
+        // code here
+        vector<int> indegree(V, 0);
+        queue<int> q;
+
+        for (int i = 0; i < V; i++)
+        {
+            for (auto it : adj[i])
+            {
+                indegree[it]++;
+            }
+        }
+
+        for (int i = 0; i < V; i++)
+        {
+            if (indegree[i] == 0)
+            {
+                q.push(i);
+            }
+        }
+
+        int cnt = 0;
+
+        while (!q.empty())
+        {
+            int front = q.front();
+            q.pop();
+            cnt++;
+
+            for (auto it : adj[front])
+            {
+                indegree[it]--;
+                if (indegree[it] == 0)
+                {
+                    q.push(it);
+                }
+            }
+        }
+
+        // If topological sort is valid then no of nodes 
+        // is equal to cnt coz cycle is not present
+
+        if(cnt != V) return true;
+        else return false;
     }
 };
