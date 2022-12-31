@@ -5,6 +5,7 @@
         "xutility": "cpp",
         "initializer_list": "cpp",
         "xiosbase": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "xlocale": "cpp"
     }
 }
