@@ -11,6 +11,8 @@ public:
         priority_queue<pr, vector<pr>, greater<pr>> pq;
 
         key[0] = 0;
+
+        //{dist, node}
         pq.push({0, 0});
 
         while (!pq.empty())
