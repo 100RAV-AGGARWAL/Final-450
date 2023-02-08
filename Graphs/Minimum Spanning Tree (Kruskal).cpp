@@ -12,7 +12,7 @@ public:
         return parent[node] = findParent(node, parent);
     }
 
-    void unionSet(int u, int v, vector<int> &parent, vector<int> &rank)
+    void unionSet(int pu, int pv, vector<int> &parent, vector<int> &rank)
     {
         // int pu = findParent(u, parent);
         // int pv = findParent(v, parent);
