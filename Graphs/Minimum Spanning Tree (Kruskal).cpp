@@ -48,7 +48,7 @@ public:
 
         for (int i = 0; i < V; i++)
         {
-            parent[i] = i;
+            parent[i] = i; 
         }
 
         sort(adj.begin(), adj.end(), cmp);
@@ -60,7 +60,7 @@ public:
 
             if (pu != pv)
             {
-                ans += ad[2];
+                ans += ad[2]; 
                 unionSet(pu, pv, parent, rank);
             }
         }

@@ -7,7 +7,7 @@ public:
             return 0;
 
         if (dp[i][j] != -1)
-            return dp[i][j];
+            return dp[i][j];    
 
         int mn = INT_MAX;
 
